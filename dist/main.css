@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Dosis", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+img {
+  width: 200px;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(/hotelMarkupAssets/header.jpg);
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  width: 100%;
+  min-height: 50vh;
+  z-index: -5;
+}
+
+.logo {
+  background: url(/hotelMarkupAssets/Logo.png);
+  min-height: 3rem;
+  min-width: 4rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  transform: translateX(100%);
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8em;
+}
+nav ul a {
+  color: black;
+  padding: 0.75em 2em;
+  display: block;
+}
+nav ul a:hover {
+  background: rgb(235, 235, 235);
+}
+nav .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  width: 100vw;
+  background-color: #000324;
+}
+header .menu {
+  position: unset;
+  float: right;
+  top: 0;
+  margin: 1.5rem;
+  height: 1.1rem;
+  width: auto;
+}
+
+#overview .hero-txt {
+  display: grid;
+  place-content: center;
+  background-color: rgba(0, 3, 36, 0.737254902);
+  margin: 8rem auto;
+  min-height: 10rem;
+  width: 100%;
+  text-align: center;
+  color: #E5FEFF;
+}
+#overview .hero-txt p {
+  font-family: Source Sans Pro;
+  padding: 2rem;
+  font-size: 0.8rem;
+}
+#overview .hero-txt h1 {
+  padding: 2rem;
+  font-weight: 400;
+}
+
+.open-nav {
+  transform: translateX(0);
+}/*# sourceMappingURL=main.css.map */
