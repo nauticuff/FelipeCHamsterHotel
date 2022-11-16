@@ -1,10 +1,8 @@
 * {
-    
     margin: 0;
-    padding: 0;
     font-family: 'Dosis', sans-serif;
     //font-family: 'Source Sans Pro', sans-serif;
-    //font-color is #E5FEFF
+    
 }
 
 html {
@@ -17,22 +15,23 @@ a {
 }
 
 img {
-    width: 200px;
+    width: 65px;
+    margin: 2rem 1rem;
 }
 
-.hero-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(/hotelMarkupAssets/header.jpg);
-    background-size: cover;
-    background-position-x: 50%;
-    background-position-y: 50%;
-    width: 100%;
-    min-height: 50vh;
-    z-index: -5;
+// .hero-img {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background: url(/hotelMarkupAssets/header.jpg);
+//     background-size: cover;
+//     background-position-x: 50%;
+//     background-position-y: 50%;
+//     width: 100%;
+//     min-height: 25rem;
+//     z-index: -5;
     
-}
+// }
 
 .logo {
     background: url(/hotelMarkupAssets/Logo.png);
@@ -45,8 +44,8 @@ img {
 }
 
 nav {
-    //display: none;
-    position: absolute;
+    //display: fixed;
+    position: fixed;
     right: 0;
     top: 0;
     background: white;
@@ -55,6 +54,7 @@ nav {
     z-index: 999;
 
     transform: translateX(100%);
+    transition: transform .4s ease-in-out;
 
     ul {
         list-style-type: none;
@@ -75,6 +75,9 @@ nav {
         float: right;
         margin: 2em;
         width: 2.5em;
+        &:hover {
+            cursor: pointer;
+        }
     }
     
 }
@@ -91,8 +94,9 @@ header {
     display: flex;
     justify-content: space-between;
     height: 4rem;
-    width: 100vw;
+    width: 100%;
     background-color: #000324;
+
 .menu {
         position: unset;
         float: right;
@@ -101,35 +105,99 @@ header {
         height: 1.1rem;
         width: auto;
 
+        &:hover {
+            cursor: pointer;
+            box-shadow: 2px 2px rgb(43, 43, 43);
+        }
+
         
     }
 }
 
 #overview {
-    //display: flex;
-    //flex-direction: column;
-    .hero-txt{
+    display: flex;
+    flex-direction: column;
+    max-height: 70rem;
+
+    .hero-container{
         display: grid;
-        place-content: center;
-        background-color: #000324bc;
-        margin: 8rem auto;
-        min-height: 10rem;
-        width: 100%;
+        justify-content: center;
+        background-image: url(../hotelMarkupAssets/header.jpg);
+        display: flex;
+        background-size: cover;
+        flex-direction: column;
+        background-repeat: no;
+        //background-color: #000324bc;
+        margin: 0rem;
         text-align: center;
         color: #E5FEFF;
+        
+      
+        height: 20rem;
+        max-height: 200rem;
+        
 
+        
+
+    .hero-txt-container {
+        display: grid;
+        align-content: center;
+        background-color: #000324c8;
+        min-height: 5rem;
+        height: 20rem;
+        margin: 2rem;
+    }
         p {
             font-family: Source Sans Pro;
-            padding: 2rem;
+            padding: 1rem;
             font-size: .8rem;
+            
         }
 
         h1 {
-            padding: 2rem;
             font-weight: 400;
         }
     }
+
+    .welcome-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: fit-content;
+        height: fit-content;
+
+        
+
+        .welcome-img {
+            background: url(../hotelMarkupAssets/hamsterhomejpg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 2vw auto;
+            border-radius: .2rem;
+
+            
+            width: auto;
+            height: auto;
+            
+        }
+        
+        .welcome-content {
+            display: flex;
+            flex-direction: column;
+            
+            margin: .2rem 1rem;
+
+            .awards {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+        }
+    }
 }
+
+
 
 .open-nav {
     transform: translateX(0);

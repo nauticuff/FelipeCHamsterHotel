@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamster Hotel</title>
-    <link rel="stylesheet" href="/dist/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
@@ -17,63 +17,74 @@
 
 <body>
 
-    <div class="nav-belt"></div>
     <!-- NAV -->
     <header>
-            <a href="/index.html">
-                <div class="logo"></div>
-            </a>
-            <nav>
-                <svg class="close" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M38 66.5C53.7401 66.5 66.5 53.7401 66.5 38C66.5 22.2599 53.7401 9.5 38 9.5C22.2599 9.5 9.5 22.2599 9.5 38C9.5 53.7401 22.2599 66.5 38 66.5Z"
-                        stroke="black" stroke-width="5" stroke-miterlimit="10" />
-                    <path d="M47.5 28.5L28.5 47.5" stroke="black" stroke-width="5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M47.5 47.5L28.5 28.5" stroke="black" stroke-width="5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-                <ul>
-                    <li><a href="#">Overview</a></li>
-                    <li><a href="#rooms">Rooms</a></li>
-                    <li><a href="#packages">Packages</a></li>
-                    <li><a href="#amenities">Amenities</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact">Reserve</a></li>
-                </ul>
+        <a href="/index.html">
+            <div class="logo"></div>
+        </a>
+        <nav>
+            <svg class="close" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M38 66.5C53.7401 66.5 66.5 53.7401 66.5 38C66.5 22.2599 53.7401 9.5 38 9.5C22.2599 9.5 9.5 22.2599 9.5 38C9.5 53.7401 22.2599 66.5 38 66.5Z"
+                    stroke="black" stroke-width="5" stroke-miterlimit="10" />
+                <path d="M47.5 28.5L28.5 47.5" stroke="black" stroke-width="5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M47.5 47.5L28.5 28.5" stroke="black" stroke-width="5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Reserve</a></li>
+            </ul>
 
-            </nav>
-            <svg class="menu" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.375 18H44.625" stroke="#E5FEFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M3.375 3H44.625" stroke="#E5FEFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M3.375 33H44.625" stroke="#E5FEFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                
+        </nav>
+        <svg class="menu" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.375 18H44.625" stroke="#E5FEFF" stroke-width="6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M3.375 3H44.625" stroke="#E5FEFF" stroke-width="6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M3.375 33H44.625" stroke="#E5FEFF" stroke-width="6" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+
     </header>
 
     <main>
         <!-- OVERVIEW (HOME) -->
         <section id="overview">
-            <div class="hero-txt">
-                <div class="hero-img"></div>
-                <h1>Run on the wheel of luxury</h1>
-                <p>Explore everything the beach has to offer in our relaxing resort.</p>
+            <div class="hero-container">
+                <div class="hero-txt-container">
+                    <h1>Run on the wheel of luxury</h1>
+                    <p>Explore everything the beach has to offer in our relaxing resort.</p>
+                </div>
             </div>
-            <img src="/hotelMarkupAssets/hamsterhomejpg.jpg"
-                alt="Hamster with a hat on sitting on a miniature beach chair munching on a snowpea">
-            <h1>Welcome to a hamster's paradise</h1>
-            <p>Nestled in the heart of Cavia California, La Petite Maison is a luxury hotel designed for the small
-                mammal with extravagance in mind. Escape to the warm comforts of stunning rooms, a relaxing spa, and
-                a
-                pool with a beach side view.
-            <div></div>Inspired by the warm beauty of the California Coast, we invite you to enjoy the rich
-            accommodations along with our unmatched luxury. Discover the satisfaction of indulging in our quality
-            rooms,
-            and thank you for choosing La Petite Maison.</p>
-            <div class="awards">
-                <div><img src="/hotelMarkupAssets/awardfinest.png" alt="Finest award badge"></div>
-                <div><img src="/hotelMarkupAssets/awardgenuine.png" alt="Most genuine award badge"></div>
-                <div><img src="/hotelMarkupAssets/awardsatisfaction.png" alt="Satisfaction guranteed award badge">
+            <div class="welcome-container">
+                <div class="welcome-img"></div>
+                <div class="welcome-content">
+                    <div class="welcome-text">
+                        <h1>Welcome to a hamster's paradise</h1>
+                        <div><br></div>
+                        <p>Nestled in the heart of Cavia California, La Petite Maison is a luxury hotel designed for the
+                            small mammal with
+                            extravagance in mind. Escape to the warm comforts of stunning rooms, a relaxing spa, and a
+                            pool with a beach side
+                            view.<br><br>Inspired by the warm beauty of the California Coast, we invite you to enjoy the
+                            rich
+                            accommodations along with
+                            our unmatched luxury. Discover the satisfaction of indulging in our quality rooms, and thank
+                            you for choosing La
+                            Petite Maison.</p>
+                    </div>
+                    <div class="awards">
+                        <div><img src="/hotelMarkupAssets/awardfinest.png" alt="Finest award badge"></div>
+                        <div><img src="/hotelMarkupAssets/awardgenuine.png" alt="Most genuine award badge"></div>
+                        <div><img src="/hotelMarkupAssets/awardsatisfaction.png"
+                                alt="Satisfaction guranteed award badge"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -181,7 +192,7 @@
         </section>
 
         <!-- CONTACT/RESERVE -->
-        <section id="reserve">
+        <section id="contact">
             <div class="reserve-box">
                 <h1>Reserve a room</h1>
                 <form action="/action_page.php">
@@ -213,4 +224,5 @@
 
 </body>
 <script src="/js/scripts.js"></script>
+
 </html>
