@@ -57,11 +57,12 @@ nav {
     transition: transform .4s ease-in-out;
 
     ul {
-        list-style-type: none;
+        list-style: none;
         padding: 0;
         margin-top: 8em;
 
         a {
+            list-style-type: none;
             color: black;
             padding: .75em 2em;
             display: block;
@@ -114,30 +115,27 @@ header {
     }
 }
 
+.card-title {
+        font-size: 1.6rem;
+    }
+
 #overview {
     display: flex;
     flex-direction: column;
-    max-height: 70rem;
+    height: fit-content;
 
     .hero-container{
+        aspect-ratio: 9/2;
         display: grid;
         justify-content: center;
         background-image: url(../hotelMarkupAssets/header.jpg);
-        display: flex;
         background-size: cover;
-        flex-direction: column;
-        background-repeat: no;
-        //background-color: #000324bc;
         margin: 0rem;
         text-align: center;
         color: #E5FEFF;
-        
-      
-        height: 20rem;
-        max-height: 200rem;
-        
+        max-height: 100vh;
 
-        
+        background-repeat: no-repeat;
 
     .hero-txt-container {
         display: grid;
@@ -145,39 +143,43 @@ header {
         background-color: #000324c8;
         min-height: 5rem;
         height: 20rem;
-        margin: 2rem;
+        margin: 10vh 0;
+        padding: 0 5vh;
+
+        //max-height: 70vw;
     }
         p {
             font-family: Source Sans Pro;
             padding: 1rem;
-            font-size: .8rem;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
             
         }
 
         h1 {
+            font-size: 2.5rem;
             font-weight: 400;
+            line-height: 2.5rem;
         }
     }
 
     .welcome-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: fit-content;
+        //display: flex;
+        //flex-direction: row;
+        //flex-wrap: wrap;
         height: fit-content;
-
         
-
         .welcome-img {
+            justify-self: center;
             background: url(../hotelMarkupAssets/hamsterhomejpg.jpg);
             background-size: cover;
-            background-repeat: no-repeat;
+            //background-repeat: no-repeat;
             margin: 2vw auto;
             border-radius: .2rem;
 
+            max-width: 80vw;
+            min-height: 100vw;
             
-            width: auto;
-            height: auto;
             
         }
         
@@ -187,9 +189,14 @@ header {
             
             margin: .2rem 1rem;
 
+            .welcome-txt {
+
+            }
+
             .awards {
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
                 justify-content: space-evenly;
                 align-items: center;
             }
@@ -198,9 +205,92 @@ header {
 }
 
 
+#rooms {
+    background-image: url(../hotelMarkupAssets/bg2.jpg);
+    
+    h1 {
+        text-align: center;
+        color: #E5FEFF;
+        padding-top: 2rem;
+        font-size: 2.5rem;
+    }
+    
+    
+    .room-size {
+        font-weight: bold;
+    }
+
+    .room-desc {
+        font-size: 1rem;
+    }
+}
+
+#packages {
+    background-image: linear-gradient(to bottom right, rgb(2, 60, 250), rgb(200, 0, 255));
+     
+    h1 {
+        text-align: center;
+        color: #E5FEFF;
+        padding-top: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .packages-cost {
+        color: #1F51A8;
+    }
+
+    .packages-desc {
+        font-size: 1rem;
+    }
+
+}
+
+#amenities {
+    background-image: url(../hotelMarkupAssets/bg.jpg);
+    display: flex;
+    justify-content: center;
+
+    .amen-txt {
+        color: #ffffff;
+        margin: 1rem;
+    }
+
+    .amen-icons {
+        display: flex;
+        justify-content: space-around;
+
+        .col {
+            img {
+                height: 3rem;
+                width: auto;
+            }  
+        }
+    }
+}
+
+#contact {
+    
+}
+
 
 .open-nav {
     transform: translateX(0);
+}
+@media screen and (min-width: 500px) {
+    .welcome-container {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (min-width: 1441px) {
+    body {
+        width: 1080px;
+        margin: 0 auto;
+        box-shadow: 0 0 12px rgb(158, 158, 158);
+    }
+
 }
 
 
