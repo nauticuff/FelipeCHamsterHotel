@@ -3,8 +3,13 @@
   font-family: "Dosis", sans-serif;
 }
 
-html {
+.dt-logo {
+  display: none;
+}
+
+body, html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 a {
@@ -42,6 +47,7 @@ nav ul {
   list-style: none;
   padding: 0;
   margin-top: 8em;
+  text-decoration: none;
 }
 nav ul a {
   list-style-type: none;
@@ -88,60 +94,62 @@ header .menu:hover {
 #overview {
   display: flex;
   flex-direction: column;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 #overview .hero-container {
-  aspect-ratio: 9/2;
-  display: grid;
   justify-content: center;
   background-image: url(../hotelMarkupAssets/header.jpg);
   background-size: cover;
-  margin: 0rem;
   text-align: center;
   color: #E5FEFF;
-  max-height: 100vh;
-  background-repeat: no-repeat;
+  width: 100%;
 }
 #overview .hero-container .hero-txt-container {
-  display: grid;
   align-content: center;
   background-color: rgba(0, 3, 36, 0.7843137255);
-  min-height: 5rem;
-  height: 20rem;
-  margin: 10vh 0;
-  padding: 0 5vh;
+  margin: 10rem 0;
+  padding: 2rem;
+  width: 100%;
 }
 #overview .hero-container p {
   font-family: Source Sans Pro;
-  padding: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.6rem;
 }
 #overview .hero-container h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 400;
   line-height: 2.5rem;
-}
-#overview .welcome-container {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 #overview .welcome-container .welcome-img {
   justify-self: center;
   background: url(../hotelMarkupAssets/hamsterhomejpg.jpg);
   background-size: cover;
-  margin: 2vw auto;
-  border-radius: 0.2rem;
-  max-width: 80vw;
-  min-height: 100vw;
+  margin: 2rem auto;
+  border-radius: 3rem;
+  width: 10rem;
+  height: 13rem;
 }
 #overview .welcome-container .welcome-content {
   display: flex;
   flex-direction: column;
   margin: 0.2rem 1rem;
+}
+#overview .welcome-container .welcome-content .welcome-txt h1 {
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  margin: 1rem;
+}
+#overview .welcome-container .welcome-content .welcome-txt h1::before {
+  content: "";
+  background: rgb(91, 181, 255);
+  display: block;
+  width: 6rem;
+  height: 0.5rem;
+  border-radius: 3px;
+}
+#overview .welcome-container .welcome-content .welcome-txt p {
+  font-size: 1.2rem;
+  line-height: 1.3rem;
 }
 #overview .welcome-container .welcome-content .awards {
   display: flex;
@@ -154,10 +162,15 @@ header .menu:hover {
 #rooms {
   background-image: url(../hotelMarkupAssets/bg2.jpg);
 }
+#rooms .card {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3rem;
+}
 #rooms h1 {
   text-align: center;
   color: #E5FEFF;
-  padding-top: 2rem;
+  margin: 2rem;
   font-size: 2.5rem;
 }
 #rooms .room-size {
@@ -168,12 +181,17 @@ header .menu:hover {
 }
 
 #packages {
-  background-image: linear-gradient(to bottom right, rgb(2, 60, 250), rgb(200, 0, 255));
+  background-color: #000433;
+}
+#packages .card {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3rem;
 }
 #packages h1 {
   text-align: center;
   color: #E5FEFF;
-  padding-top: 2rem;
+  padding-bottom: 2rem;
   font-size: 2.5rem;
 }
 #packages .packages-cost {
@@ -192,29 +210,130 @@ header .menu:hover {
   color: #ffffff;
   margin: 1rem;
 }
+#amenities .amen-txt h1 {
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+#amenities .amen-txt p {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  margin: 1rem;
+}
 #amenities .amen-icons {
   display: flex;
   justify-content: space-around;
+  margin: 1.5rem 0;
 }
 #amenities .amen-icons .col img {
   height: 3rem;
   width: auto;
 }
 
+#contact {
+  background-image: url(../hotelMarkupAssets/hamsterreserve.jpg);
+  background-size: cover;
+}
+#contact .reserve-header {
+  color: #000324;
+  font-size: 2.8rem;
+  text-align: center;
+}
+#contact .mb-3 {
+  margin: 1rem;
+  color: #000324;
+  font-size: 1.5rem;
+  border-style: solid;
+  border: #000324;
+}
+
+footer {
+  background-color: #000324;
+  text-align: center;
+}
+footer img {
+  display: inline-block;
+}
+footer p {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
 .open-nav {
   transform: translateX(0);
 }
 
-@media screen and (min-width: 500px) {
-  .welcome-container {
-    width: 500px;
-    margin: 0 auto;
+@media screen and (min-width: 380px) {
+  #contact .contact-box {
+    width: 380px;
   }
 }
-@media screen and (min-width: 1441px) {
-  body {
-    width: 1080px;
-    margin: 0 auto;
-    box-shadow: 0 0 12px rgb(158, 158, 158);
+@media screen and (min-width: 500px) {
+  .welcome-container, #rooms, #packages {
+    margin: 0rem 5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .both-carousels {
+    display: flex;
+  }
+  .both-carousels #packages h1 {
+    margin: 2rem;
+    padding: 0;
+  }
+  .both-carousels #room-carousel, .both-carousels #packages-carousel {
+    margin: 1rem;
+  }
+  .both-carousels #room-carousel .carousel-inner, .both-carousels #packages-carousel .carousel-inner {
+    height: 45rem;
+  }
+  .both-carousels #room-carousel .card-body, .both-carousels #packages-carousel .card-body {
+    height: 26rem;
+  }
+  .both-carousels #packages, .both-carousels #rooms {
+    margin: 0;
+    flex-basis: 100%;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 650px) {
+  .menu {
+    display: none;
+  }
+  header {
+    justify-content: center;
+  }
+  .logo {
+    display: none;
+  }
+  .dt-logo {
+    display: block;
+    padding: 0;
+    transform: translateY(-70%);
+  }
+  nav {
+    transform: translateX(0);
+    transform: translateY(15%);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    color: white;
+    padding: 0.5em 1.5em;
+    font-size: 0.9rem;
+  }
+  nav ul a:hover {
+    border: #ffffff 2px solid;
+    background: none;
+    text-decoration: underline;
   }
 }/*# sourceMappingURL=main.css.map */
