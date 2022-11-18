@@ -7,7 +7,8 @@
   display: none;
 }
 
-body, html {
+body,
+html {
   scroll-behavior: smooth;
   height: 100%;
 }
@@ -99,9 +100,11 @@ header .menu:hover {
   justify-content: center;
   background-image: url(../hotelMarkupAssets/header.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
   color: #E5FEFF;
   width: 100%;
+  background-position-x: 35%;
 }
 #overview .hero-container .hero-txt-container {
   align-content: center;
@@ -208,11 +211,10 @@ header .menu:hover {
 }
 #amenities .amen-txt {
   color: #ffffff;
-  margin: 1rem;
+  margin-top: 1rem;
 }
 #amenities .amen-txt h1 {
   font-size: 2.5rem;
-  margin: 1rem;
 }
 #amenities .amen-txt p {
   font-size: 1.3rem;
@@ -249,6 +251,7 @@ header .menu:hover {
 footer {
   background-color: #000324;
   text-align: center;
+  padding-bottom: 1.8rem;
 }
 footer img {
   display: inline-block;
@@ -262,13 +265,19 @@ footer p {
   transform: translateX(0);
 }
 
+.desktop-rooms-and-packages {
+  display: none;
+}
+
 @media screen and (min-width: 380px) {
   #contact .contact-box {
     width: 380px;
   }
 }
 @media screen and (min-width: 500px) {
-  .welcome-container, #rooms, #packages {
+  .welcome-container,
+#rooms,
+#packages {
     margin: 0rem 5rem;
   }
 }
@@ -280,16 +289,20 @@ footer p {
     margin: 2rem;
     padding: 0;
   }
-  .both-carousels #room-carousel, .both-carousels #packages-carousel {
+  .both-carousels #room-carousel,
+.both-carousels #packages-carousel {
     margin: 1rem;
   }
-  .both-carousels #room-carousel .carousel-inner, .both-carousels #packages-carousel .carousel-inner {
+  .both-carousels #room-carousel .carousel-inner,
+.both-carousels #packages-carousel .carousel-inner {
     height: 45rem;
   }
-  .both-carousels #room-carousel .card-body, .both-carousels #packages-carousel .card-body {
+  .both-carousels #room-carousel .card-body,
+.both-carousels #packages-carousel .card-body {
     height: 26rem;
   }
-  .both-carousels #packages, .both-carousels #rooms {
+  .both-carousels #packages,
+.both-carousels #rooms {
     margin: 0;
     flex-basis: 100%;
     flex: 1;
@@ -305,15 +318,10 @@ footer p {
   .logo {
     display: none;
   }
-  .dt-logo {
-    display: block;
-    padding: 0;
-    transform: translateY(-70%);
-  }
   nav {
     transform: translateX(0);
-    transform: translateY(15%);
-    position: unset;
+    transform: translateY(10%);
+    position: relative;
     display: block;
     width: auto;
     height: auto;
@@ -325,6 +333,12 @@ footer p {
   nav ul {
     display: flex;
     margin: 0;
+    transform: translateY(15%);
+  }
+  nav ul .dt-logo {
+    display: block;
+    padding: 0;
+    transform: translateY(-43%);
   }
   nav ul a {
     color: white;
@@ -335,5 +349,136 @@ footer p {
     border: #ffffff 2px solid;
     background: none;
     text-decoration: underline;
+  }
+}
+@media screen and (min-width: 970px) {
+  #overview .hero-container {
+    background-position-y: 50%;
+  }
+  #overview .hero-container .hero-txt-container {
+    width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #overview .welcome-container {
+    margin: 1rem auto;
+    height: 35rem;
+    width: 970px;
+    display: flex;
+    align-items: center;
+  }
+  #overview .welcome-container .welcome-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  #overview .welcome-container .welcome-content .welcome-txt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+  }
+  #overview .welcome-container .welcome-content .welcome-txt .welcome-img {
+    order: 1;
+    max-width: 22.2rem;
+    height: 25rem;
+    flex: 1;
+    margin: 1rem auto;
+    border-radius: 0;
+  }
+  #overview .welcome-container .welcome-content .welcome-txt h1 {
+    order: 2;
+    flex: 0.5;
+  }
+  #overview .welcome-container .welcome-content .welcome-txt p {
+    order: 3;
+    flex: 1;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  #overview .welcome-container .welcome-content .awards {
+    position: absolute;
+    transform: translate(-6%, 70%);
+  }
+  #overview .welcome-container .welcome-content .awards img {
+    width: 8.7rem;
+    height: 8rem;
+  }
+  .both-carousels {
+    display: none;
+  }
+  .desktop-rooms-and-packages {
+    display: block;
+  }
+  .rooms-card-container {
+    background-image: url(../hotelMarkupAssets/bg2.jpg);
+    padding: 2rem;
+    height: 1200px;
+  }
+  .rooms-card-container .room-size {
+    font-weight: bold;
+  }
+  .rooms-card-container .card {
+    height: 800px;
+  }
+  .dt-packages {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 969px;
+  }
+  .dt-packages .feature {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 4rem;
+    margin-bottom: 2rem;
+    width: 969px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .dt-packages .feature img {
+    width: 27em;
+  }
+  .dt-packages .feature .content {
+    text-align: left;
+    margin-top: 4rem;
+    padding-right: 4rem;
+  }
+  .dt-packages .feature.right {
+    grid-template-areas: "left right";
+  }
+  .dt-packages .feature.right img {
+    grid-area: right;
+  }
+  .dt-packages .feature.right .content {
+    text-align: right;
+    justify-self: right;
+    padding-left: 4rem;
+    padding-right: 0;
+  }
+  #contact .contact-box {
+    width: auto;
+  }
+  #contact .contact-box .container-md {
+    width: 970px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #contact .contact-box .container-md .mb-3 {
+    font-size: 1.1rem;
+  }
+  #contact .contact-box .container-md .row {
+    margin-left: 4rem;
+    height: 0.5rem;
+  }
+}
+@media screen and (min-width: 1441px) {
+  html {
+    width: 1440px;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=main.css.map */
